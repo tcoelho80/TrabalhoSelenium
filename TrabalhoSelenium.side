@@ -1,0 +1,78 @@
+{
+  "id": "d543396b-7cac-4f8f-ab6f-b4ac7d2b4e7e",
+  "version": "2.0",
+  "name": "Tra",
+  "url": "https://buscacepinter.correios.com.br",
+  "tests": [{
+    "id": "78f2c14d-02f7-4b15-82f6-aa82102eb085",
+    "name": "Untitled",
+    "commands": [{
+      "id": "a1934ceb-91c9-4ba0-b595-2f6f64e45ec1",
+      "comment": "Abrir página do Correio",
+      "command": "open",
+      "target": "/app/cep/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01c1c326-086f-473f-955b-7beccbd4d9b8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d19d4358-7ed7-4c25-a853-3799908ddab7",
+      "comment": "Clica no Textbox do CEP",
+      "command": "click",
+      "target": "id=cep",
+      "targets": [
+        ["id=cep", "id"],
+        ["name=cep", "name"],
+        ["css=#cep", "css:finder"],
+        ["xpath=//input[@id='cep']", "xpath:attributes"],
+        ["xpath=//div[@id='formulario']/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79b5d464-9ae6-4a9d-86d7-ac01dcd54414",
+      "comment": "Insere o valor no Textbox do cep",
+      "command": "type",
+      "target": "id=cep",
+      "targets": [
+        ["id=cep", "id"],
+        ["name=cep", "name"],
+        ["css=#cep", "css:finder"],
+        ["xpath=//input[@id='cep']", "xpath:attributes"],
+        ["xpath=//div[@id='formulario']/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "08030-410"
+    }, {
+      "id": "b3667a94-5233-4e71-9f89-dbe44f8754f9",
+      "comment": "Clica para pesquisar",
+      "command": "click",
+      "target": "id=btn_pesquisar",
+      "targets": [
+        ["id=btn_pesquisar", "id"],
+        ["name=btn_pesquisar", "name"],
+        ["css=#btn_pesquisar", "css:finder"],
+        ["xpath=//button[@id='btn_pesquisar']", "xpath:attributes"],
+        ["xpath=//div[@id='formulario']/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c15c68f1-275b-4935-a45a-b7eba92c354e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["78f2c14d-02f7-4b15-82f6-aa82102eb085"]
+  }],
+  "urls": ["https://buscacepinter.correios.com.br/"],
+  "plugins": []
+}
